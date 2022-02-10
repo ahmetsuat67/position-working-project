@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    /* background-color: rgba(255, 228, 196, 0.5) */
+    background-image: url(./images/background_img.png);
+}
+main{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 36px 0px;
+}
+
+section{
+    border: 1px solid #000000;
+    padding: 20px 50px 50px;
+    width: 700px;
+    height: 150px;
+    background-color:#FFFFFF;
+    position: relative; /*kendi bulunduğu konumuna göre haeket eder */
+    align-self: center;
+    margin-bottom: 10px;
+    
+}
+section img{ /*section img verdiğim için yapılarım positonları aynı olduğundan üst üste geldi bunu farkedince daha az kod yazmak için uğraşmadım :) 
+     veya img larımın birine relative diğerine absolute verip kutum içinde aynı konumları verseydim üst üste gelebilir
+     psition fixed katman olarak sabitleyip her yerde öne çıkardır sticky ise bulunduğu konumunda sabit bırakır
+     z index çalışması için bir position olması gerekir ve öne çıkarma sırasına göre sıralarız*/
+    width: 10rem;
+    height: 11rem;
+    float: left;
+    box-shadow: 0 1px 3px 0 #4f4f4f;
+    position: absolute; /* absolute içinde bulunduğu elmentin 0 0 noktasına göre konumlanır. */
+    top: 30px;          /*Hiç bir elenemtin içinde olmazsa body'nin 0'a 0'a noktasını alır */
+    left: 25px; 
+
+}
+section:hover{
+    outline: 5px solid red;
+    outline-offset: 5px;
+    transition: all ease-in-out 300ms;
+}
+section img:hover{
+    opacity: 0;
+}
+/* section img:active{
+    opacity: 0;
+ 
+} */
+
+ul{
+    font-size: 18px;
+    font-family: 'Nunito',Helvetica,Arial,Lucida,sans-serif;
+    color: rgb(12, 1, 1);
+    line-height: 28px;
+    vertical-align: baseline;
+    letter-spacing:normal;
+    word-spacing: 0px;
+    margin: 0rem 0rem 5rem 15rem ;
+    
+}
+ul h3{
+    color: red;
+}
+ul li{
+   list-style-type:"\1F3AF";
+}
+
+#html{
+    box-shadow: 5px 5px 15px 5px #E95726;
+}
+#css{
+    box-shadow: 5px 5px 15px 5px #264EE4;
+}
+#js{
+    box-shadow: 5px 5px 15px 5px #D6BA32;
+}
